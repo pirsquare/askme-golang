@@ -12,9 +12,11 @@ AskMe Golang Client
 go get github.com/pirsquare/askme-golang
 
 # For linux/mac run command below to rename executable to `askme`
-dirname $(which askme-golang) | { read filedir; mv $filedir/askme-golang $filedir/askme; }
+dirname $(which askme-golang) | \
+{ read filedir; mv $filedir/askme-golang $filedir/askme; }
 
-# For windows run command below from your root path to search and rename executable to `askme`
+# For windows run command below from your root
+# path to search and rename executable to `askme`
 for /r %x in (askme-golang.e?e) do ren "%x" askme.exe
 ```
 
